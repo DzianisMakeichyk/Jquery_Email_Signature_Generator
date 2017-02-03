@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Signature Generator</title>
+  <meta name="robots" content="nofollow">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+  <div class="hero container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Information</h2>
+      <p>Fill out this form with your information to generate a custom Email signature.</p>
+      <hr>
+      <form id="employee-information-form">
+        <div class="thumbnail">
+          <input type="file" id="upload">
+          <button type="button" class="btn uploadbtn"><span>Upload Image</span></button>
+        </div>
+        <fieldset>
+          <div class="input-full-name form-group">
+            <label>Full name</label>
+            <input class="form-control" type="text" name="full_name" placeholder="Karl Benz">
+          </div>
+          <div class="input-position form-group">
+            <label>Position</label>
+            <input class="form-control" type="text" name="position" placeholder="CEO">
+          </div>
+          <div class="input-email-address form-group">
+            <label>Email address</label>
+            <input class="form-control" type="text" name="email_address" placeholder="karl.benz@benz.com">
+          </div>
+          <!--<div class="input-phone-office form-group">-->
+            <!--<label>Office phone number</label>-->
+            <!--<input class="form-control" type="tel" name="phone_office" placeholder="555-555-5555">-->
+            <!--<span class="help-block">Use <mark>hyphens</mark> for your separator. Example: 555-867-5309</span>-->
+          <!--</div>-->
+          <div class="input-phone-mobile form-group">
+            <label>Mobile phone number</label>
+            <input class="form-control" type="tel" name="phone_mobile" placeholder="123-456-789">
+          </div>
+        </fieldset>
+      </form>
+      <button id="reset-form" type="button" class="waves-effect waves-light btn pink">Reset Form</button>
+    </div>
+    <div id="signature-output" class="col-md-6">
+      <h2>Generated Signatures</h2>
+      <p>Copy the signature you want to use and paste into your email program.</p>
+      <hr>
+
+      <h3>HTML Full</h3>
+      <ul id="html-signature-full-tabs" class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a role="tab" href="#signature-full-visual">Visual</a></li>
+        <li role="presentation"><a role="tab" href="#signature-full-html">HTML</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="signature-full-visual" class="tab-pane active" role="tabpanel">
+          <div class="thumbnail">
+            <div class="view-img">
+              <img src="https://gallery.mailchimp.com/16d94a7b1c408429988343325/images/91fe6cf6-492f-439c-bbec-6b13588f9717.jpg" alt="">
+            </div>
+          </div>
+          <table style="font-family:'Open Sans', sans-serif;color:#162a33;font-style:normal;font-size:14px;margin:0px;padding:0px;border:0px;outline:0px;vertical-align:baseline;line-height:1.15;" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr border="0" cellpadding="0" cellspacing="0">
+                <td border="0" cellpadding="0" cellspacing="0">
+                  <strong style="font-size:13px;"><span class="output_full_name"></span></strong><br>
+                  <span style="color:#40bac8;font-size:10px;text-transform:uppercase;" class="output_position"></span><br><br>
+                </td>
+              </tr>
+
+              <tr border="0" cellpadding="0" cellspacing="0">
+                <td border="0" cellpadding="0" cellspacing="0">
+                  <strong style="color:#eb6126;font-size:10px;">E:</strong> <a class="email_address_anchor" style="color:#a0a3a5;font-size:10px;text-decoration:none;" href="mailto:"><span class="output_email_address"></span></a>
+                  <span class="phone_numbers_element">
+                    <br>
+                    <span class="phone_office_element"><strong style="color:#eb6126;font-size:10px;">O:</strong> <span style="color:#a0a3a5;font-size:10px;text-decoration:none;" class="output_phone_office"></span>&nbsp;&nbsp;</span>
+                    <span class="phone_mobile_element"><strong style="color:#eb6126;font-size:10px;">M:</strong> <span style="color:#a0a3a5;font-size:10px;text-decoration:none;" class="output_phone_mobile"></span></span>
+                  </span>
+                  <span class="twitter_element">
+                    <br>
+                    <strong style="color:#eb6126;font-size:10px;">T:</strong> <a class="twitter_anchor" style="color:#a0a3a5;font-size:10px;text-decoration:none;" href="https://twitter.com/wpengine">@<span class="output_twitter_username"></span></a>
+                  </span>
+                  <br><br>
+                </td>
+              </tr>
+
+              <tr border="0" cellpadding="0" cellspacing="0">
+                <td border="0" cellpadding="0" cellspacing="0">
+                  <font style="margin:0;padding:0;font-size:10px;color:#a0a3a5;">
+                    <strong style="color:#162a33;"><span class="output_company_name"></span></strong><br>
+                    <span class="output_address_full"></span>
+                  </font>
+                  <br><br>
+                </td>
+              </tr>
+
+              <tr border="0" cellpadding="0" cellspacing="0">
+                <td border="0" cellpadding="0" cellspacing="0">
+                  <font style="margin:0;padding:0;">
+                    <span style="font-family: arial, sans-serif; font-size: 10px; color: #dbdad6;">
+                      <a href="https://wpengine.com/" style=" color: #40bac8;"> wpengine.com</a> |
+                      <a href="https://wpengine.com/blog/" style=" color: #40bac8;">blog</a> |
+                      <a href="https://twitter.com/wpengine" style=" color: #40bac8;">twitter</a> |
+                      <a href="http://wpengine-careers.com/" style=" color: #40bac8;">careers</a> |
+                      <a href="http://torquemag.io/" style=" color: #40bac8;">torquemag.io</a>
+                    </span>
+                  </font>
+                  <br>
+                </td>
+              </tr>
+
+              <tr class="promo_line_element" border="0" cellpadding="0" cellspacing="0">
+                <td border="0" cellpadding="0" cellspacing="0">
+                  <br><br>
+                  <font style="font-size: 12px; color: #eb6126; font-family: arial, sans-serif; margin: 0; padding: 0; ">
+                    <strong><span class="output_promo_line"></span></strong>
+                  </font>
+                </td>
+              </tr>
+              <tr class="promo_line_element" height="0" border="0" cellpadding="0" cellspacing="0"><td border="0" cellpadding="0" cellspacing="0"></td></tr>
+              <tr class="logo_element" border="0" cellpadding="0" cellspacing="0"></tr>
+            </tbody>
+          </table>
+        </div> <!-- /signature-full-visual -->
+        <div id="signature-full-html" class="tab-pane" role="tabpanel">
+          <textarea class="form-control" rows="10"></textarea>
+        </div> <!-- /signature-full-html -->
+      </div> <!-- /tab-content -->
+
+        <div id="signature-horizontal-visual" class="tab-pane active" role="tabpanel"></div> <!-- /signature-horizontal-visual -->
+
+    </div> <!-- /signature-output -->
+  </div> <!-- /row -->
+</div> <!-- /container -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+
+  <script src="public/js/index.js"></script>
+
+</body>
+</html>
